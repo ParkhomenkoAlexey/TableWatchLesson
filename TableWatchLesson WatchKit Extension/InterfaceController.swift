@@ -12,13 +12,14 @@ import Foundation
 struct Model {
     var title: String
     var description: String
+    var objects: [String]
     
     static func getData() -> [Model] {
         return [
-            Model(title: "111", description: "111"),
-            Model(title: "222", description: "222"),
-            Model(title: "333", description: "333"),
-            Model(title: "444", description: "444")
+            Model(title: "111", description: "111", objects: ["first1", "second1", "third1", "fouth1"]),
+            Model(title: "222", description: "222", objects: ["first2", "second2", "third2", "fouth2"]),
+            Model(title: "333", description: "333", objects: ["first3", "second3", "third3", "fouth3"]),
+            Model(title: "444", description: "444", objects: ["first4", "second4", "third4", "fouth4"])
         ]
     }
 }

@@ -11,15 +11,26 @@ import WatchKit
 
 class InterfaceDetailController: WKInterfaceController {
 
-    
-    @IBOutlet weak var titleLabel: WKInterfaceLabel!
+    @IBOutlet weak var detailTable: WKInterfaceTable!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         if let model = context as? Model {
-            titleLabel.setText(model.title)
+            
+            let rowTypes: [String] = ["titleRowid"] + model.objects.map({ (_) in
+                "objectRowid"
+            })
+            print(rowTypes)
+            detailTable.setRowTypes(rowTypes)
+            for i in 0..<detailTable.numberOfRows {
+                let row = detailTable.rowController(at: i)
+                if let titleRow = row as? TableTitleRow {
+                    titleRow.myTitleLabel.setText(model.title)
+                } else if let objectRow = row as? TableObjectRow {
+                    objectRow.objectTitle.setText("\(i). " + model.objects[i - 1])
+                }
+            }
         }
-        
     }
 }

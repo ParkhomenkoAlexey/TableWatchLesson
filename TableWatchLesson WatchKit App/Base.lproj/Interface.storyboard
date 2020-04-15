@@ -41,10 +41,33 @@
             <objects>
                 <controller id="7lh-B3-HFU" customClass="InterfaceDetailController" customModule="TableWatchLesson_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="0nh-Se-nEK"/>
+                        <table alignment="left" id="DcO-DN-d9P">
+                            <items>
+                                <tableRow identifier="titleRowid" id="3T1-7s-gmV" customClass="TableTitleRow" customModule="TableWatchLesson_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="iv7-C1-iYd">
+                                        <items>
+                                            <label alignment="left" text="Title Label" id="Ygn-gc-ZD2"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="myTitleLabel" destination="Ygn-gc-ZD2" id="ogn-l2-vBp"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="objectRowid" id="AKU-dN-Rgl" customClass="TableObjectRow" customModule="TableWatchLesson_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="non-Ud-BJy">
+                                        <items>
+                                            <label alignment="left" text="1. First object" id="m1R-9k-Ljd"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="objectTitle" destination="m1R-9k-Ljd" id="PyN-Cb-uqY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="titleLabel" destination="0nh-Se-nEK" id="wHf-nb-yoU"/>
+                        <outlet property="detailTable" destination="DcO-DN-d9P" id="l5d-Zk-5uW"/>
                     </connections>
                 </controller>
             </objects>
