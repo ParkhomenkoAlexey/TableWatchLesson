@@ -52,7 +52,7 @@ class BooksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(UserSettings.userBooks)
         setupNavigationController()
         setupElements()
         setupConstraints()

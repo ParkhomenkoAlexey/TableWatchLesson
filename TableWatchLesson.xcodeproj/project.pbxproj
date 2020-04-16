@@ -21,11 +21,15 @@
 		F058055E24462EC500060014 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F058055C24462EC500060014 /* Interface.storyboard */; };
 		F058056024462EC600060014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F058055F24462EC600060014 /* Assets.xcassets */; };
 		F058056724462EC600060014 /* TableWatchLesson WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F058056624462EC600060014 /* TableWatchLesson WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F058056C24462EC600060014 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058056B24462EC600060014 /* InterfaceController.swift */; };
+		F058056C24462EC600060014 /* BooksInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058056B24462EC600060014 /* BooksInterfaceController.swift */; };
 		F058056E24462EC600060014 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058056D24462EC600060014 /* ExtensionDelegate.swift */; };
 		F058057024462EC700060014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F058056F24462EC700060014 /* Assets.xcassets */; };
 		F05805802446302D00060014 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F058057F2446302D00060014 /* TableRowController.swift */; };
 		F0580582244630B400060014 /* InterfaceDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0580581244630B400060014 /* InterfaceDetailController.swift */; };
+		F06F8AFA2448A19300DE61A6 /* StarterInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06F8AF92448A19300DE61A6 /* StarterInterfaceController.swift */; };
+		F06F8AFC2448A22600DE61A6 /* BookRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06F8AFB2448A22600DE61A6 /* BookRowController.swift */; };
+		F06F8AFD2448A39500DE61A6 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048A1692448550300F8E33B /* UserSettings.swift */; };
+		F06F8AFE2448A3C700DE61A6 /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048A1672447386C00F8E33B /* BookItem.swift */; };
 		F0E8566A2447120D00AD6839 /* TableTitleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E856692447120D00AD6839 /* TableTitleRow.swift */; };
 		F0E8566C2447122100AD6839 /* TableObjectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8566B2447122100AD6839 /* TableObjectRow.swift */; };
 		F0E8566E244717A200AD6839 /* HeaderRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8566D244717A200AD6839 /* HeaderRowController.swift */; };
@@ -91,12 +95,14 @@
 		F058055F24462EC600060014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F058056124462EC600060014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F058056624462EC600060014 /* TableWatchLesson WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TableWatchLesson WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F058056B24462EC600060014 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F058056B24462EC600060014 /* BooksInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksInterfaceController.swift; sourceTree = "<group>"; };
 		F058056D24462EC600060014 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F058056F24462EC700060014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F058057124462EC700060014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F058057F2446302D00060014 /* TableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
 		F0580581244630B400060014 /* InterfaceDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDetailController.swift; sourceTree = "<group>"; };
+		F06F8AF92448A19300DE61A6 /* StarterInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterInterfaceController.swift; sourceTree = "<group>"; };
+		F06F8AFB2448A22600DE61A6 /* BookRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowController.swift; sourceTree = "<group>"; };
 		F0E856692447120D00AD6839 /* TableTitleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTitleRow.swift; sourceTree = "<group>"; };
 		F0E8566B2447122100AD6839 /* TableObjectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableObjectRow.swift; sourceTree = "<group>"; };
 		F0E8566D244717A200AD6839 /* HeaderRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRowController.swift; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 		F058053A24462EC200060014 = {
 			isa = PBXGroup;
 			children = (
+				F048A1692448550300F8E33B /* UserSettings.swift */,
+				F048A1672447386C00F8E33B /* BookItem.swift */,
 				F058054524462EC300060014 /* TableWatchLesson */,
 				F058055B24462EC500060014 /* TableWatchLesson WatchKit App */,
 				F058056A24462EC600060014 /* TableWatchLesson WatchKit Extension */,
@@ -147,7 +155,6 @@
 				F058054824462EC300060014 /* SceneDelegate.swift */,
 				F06F8AF424489FEC00DE61A6 /* Controllers */,
 				F06F8AF52448A00400DE61A6 /* Model */,
-				F048A1692448550300F8E33B /* UserSettings.swift */,
 				F048A16F2448655800F8E33B /* StackView + Extension.swift */,
 				F058054C24462EC300060014 /* Main.storyboard */,
 				F058054F24462EC500060014 /* Assets.xcassets */,
@@ -170,7 +177,9 @@
 		F058056A24462EC600060014 /* TableWatchLesson WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F058056B24462EC600060014 /* InterfaceController.swift */,
+				F06F8AF92448A19300DE61A6 /* StarterInterfaceController.swift */,
+				F058056B24462EC600060014 /* BooksInterfaceController.swift */,
+				F06F8AFB2448A22600DE61A6 /* BookRowController.swift */,
 				F0580581244630B400060014 /* InterfaceDetailController.swift */,
 				F0E856692447120D00AD6839 /* TableTitleRow.swift */,
 				F0E8566D244717A200AD6839 /* HeaderRowController.swift */,
@@ -195,7 +204,6 @@
 		F06F8AF52448A00400DE61A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F048A1672447386C00F8E33B /* BookItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,10 +356,14 @@
 			files = (
 				F058056E24462EC600060014 /* ExtensionDelegate.swift in Sources */,
 				F05805802446302D00060014 /* TableRowController.swift in Sources */,
+				F06F8AFA2448A19300DE61A6 /* StarterInterfaceController.swift in Sources */,
+				F06F8AFD2448A39500DE61A6 /* UserSettings.swift in Sources */,
 				F0E8566A2447120D00AD6839 /* TableTitleRow.swift in Sources */,
+				F06F8AFE2448A3C700DE61A6 /* BookItem.swift in Sources */,
 				F0580582244630B400060014 /* InterfaceDetailController.swift in Sources */,
 				F0E8566C2447122100AD6839 /* TableObjectRow.swift in Sources */,
-				F058056C24462EC600060014 /* InterfaceController.swift in Sources */,
+				F058056C24462EC600060014 /* BooksInterfaceController.swift in Sources */,
+				F06F8AFC2448A22600DE61A6 /* BookRowController.swift in Sources */,
 				F0E8566E244717A200AD6839 /* HeaderRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15505" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15505" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dOY-YP-a0b">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Starter Interface Controller-->
+        <scene sceneID="bSV-Ye-LBZ">
+            <objects>
+                <controller id="dOY-YP-a0b" customClass="StarterInterfaceController" customModule="TableWatchLesson_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="9e8-I1-Q2h">
+                            <items>
+                                <tableRow identifier="BookRowType" id="HFk-Sf-zzu" customClass="BookRowController" customModule="TableWatchLesson_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="zE6-9c-NRU">
+                                        <items>
+                                            <label alignment="left" text="Расширить сознание легально" numberOfLines="0" id="Ynq-rJ-59U">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="bookTitle" destination="Ynq-rJ-59U" id="4UM-jt-D7I"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Выбрать книги" id="0CF-RB-5u2">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="Hl5-a6-L1v"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="9e8-I1-Q2h" id="ohg-4s-CHp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="-286"/>
+        </scene>
+        <!--Books Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TableWatchLesson_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="BooksInterfaceController" customModule="TableWatchLesson_WatchKit_App" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="9eQ-ja-4eU">
                             <items>
@@ -27,11 +64,13 @@
                                     </connections>
                                 </tableRow>
                                 <tableRow identifier="headerRowid" id="68R-xI-xO5" customClass="HeaderRowController" customModule="TableWatchLesson_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="EMv-2E-A5x">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="EMv-2E-A5x">
                                         <items>
-                                            <imageView width="40" height="40" alignment="left" verticalAlignment="center" image="fruits" contentMode="scaleAspectFit" id="dCA-D8-Wvi"/>
-                                            <label alignment="left" verticalAlignment="center" text="Label" id="Wrr-7Z-ptj">
-                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            <imageView width="24" height="24" alignment="left" verticalAlignment="center" image="children" contentMode="scaleAspectFit" id="dCA-D8-Wvi">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                            <label alignment="left" verticalAlignment="center" text="ПСИХГИЯ МОАЦИЯ" numberOfLines="0" id="Wrr-7Z-ptj">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,7 +88,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="31"/>
+            <point key="canvasLocation" x="310" y="-286"/>
         </scene>
         <!--Interface Detail Controller-->
         <scene sceneID="h2n-Nb-hlD">
@@ -87,10 +126,10 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="328" y="31"/>
+            <point key="canvasLocation" x="565" y="-286"/>
         </scene>
     </scenes>
     <resources>
-        <image name="fruits" width="512" height="512"/>
+        <image name="children" width="64" height="64"/>
     </resources>
 </document>

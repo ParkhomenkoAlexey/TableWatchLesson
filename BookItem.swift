@@ -15,6 +15,23 @@ enum GenreType: String {
     case novels
     case detectives
     case someError
+    
+    func descriptionForWatch() -> String {
+        switch self {
+        case .activeNow:
+            return ""
+        case .psychology:
+            return "ПСИХОЛОГИЯ МОТИВАЦИЯ"
+        case .children:
+             return "ДЕТСКИЕ КНИГИ"
+        case .novels:
+            return "ЛЮБОВНЫЕ РОМАНЫ"
+        case .detectives:
+            return "ДЕТЕКТИВЫ"
+        case .someError:
+            return ""
+        }
+    }
 }
 
 class BookItem: NSObject, NSCoding {
