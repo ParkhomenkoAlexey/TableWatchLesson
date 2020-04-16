@@ -1,5 +1,5 @@
 //
-//  BookRowController.swift
+//  MyBookRowController.swift
 //  TableWatchLesson WatchKit Extension
 //
 //  Created by Алексей Пархоменко on 16.04.2020.
@@ -8,15 +8,14 @@
 
 import WatchKit
 
-class BookRowController: NSObject {
+class MyBookRowController: NSObject {
     
     var book: BookItem! {
       didSet {
-        bookTitle.setText("\(book.name) \(book.author)")
+        nameLabel.setText("\(book.name)")
       }
     }
     
-    @IBOutlet weak var bookTitle: WKInterfaceLabel!
-    
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
 
 }

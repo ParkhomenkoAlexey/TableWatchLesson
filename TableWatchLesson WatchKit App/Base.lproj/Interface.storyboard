@@ -13,16 +13,19 @@
                     <items>
                         <table alignment="left" id="9e8-I1-Q2h">
                             <items>
-                                <tableRow identifier="BookRowType" id="HFk-Sf-zzu" customClass="BookRowController" customModule="TableWatchLesson_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="zE6-9c-NRU">
+                                <tableRow identifier="myBookRow" id="HFk-Sf-zzu" customClass="MyBookRowController" customModule="TableWatchLesson_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="zE6-9c-NRU">
                                         <items>
                                             <label alignment="left" text="Расширить сознание легально" numberOfLines="0" id="Ynq-rJ-59U">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
+                                        <connections>
+                                            <segue destination="7lh-B3-HFU" kind="push" identifier="detailBook" id="oZU-j6-xkh"/>
+                                        </connections>
                                     </group>
                                     <connections>
-                                        <outlet property="bookTitle" destination="Ynq-rJ-59U" id="4UM-jt-D7I"/>
+                                        <outlet property="nameLabel" destination="Ynq-rJ-59U" id="0qB-6E-xCO"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -41,7 +44,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="34" y="-286"/>
+            <point key="canvasLocation" x="252" y="-443"/>
         </scene>
         <!--Books Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -50,7 +53,7 @@
                     <items>
                         <table alignment="left" id="9eQ-ja-4eU">
                             <items>
-                                <tableRow identifier="tableid" id="nMx-cp-k69" customClass="TableRowController" customModule="TableWatchLesson_WatchKit_Extension">
+                                <tableRow identifier="bookRow" id="nMx-cp-k69" customClass="TableRowController" customModule="TableWatchLesson_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="pgS-I6-tL9">
                                         <items>
                                             <label alignment="left" text="Label" id="dxo-W1-38X"/>
@@ -63,7 +66,7 @@
                                         <segue destination="7lh-B3-HFU" kind="push" id="3Ax-j3-Sa4"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="headerRowid" id="68R-xI-xO5" customClass="HeaderRowController" customModule="TableWatchLesson_WatchKit_Extension">
+                                <tableRow identifier="headerRow" id="68R-xI-xO5" customClass="HeaderRowController" customModule="TableWatchLesson_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="10" id="EMv-2E-A5x">
                                         <items>
                                             <imageView width="24" height="24" alignment="left" verticalAlignment="center" image="children" contentMode="scaleAspectFit" id="dCA-D8-Wvi">
@@ -88,48 +91,144 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="310" y="-286"/>
+            <point key="canvasLocation" x="252" y="-37"/>
         </scene>
-        <!--Interface Detail Controller-->
+        <!--Book Detail Controller-->
         <scene sceneID="h2n-Nb-hlD">
             <objects>
-                <controller id="7lh-B3-HFU" customClass="InterfaceDetailController" customModule="TableWatchLesson_WatchKit_Extension">
+                <controller id="7lh-B3-HFU" customClass="BookDetailController" customModule="TableWatchLesson_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="hax-1J-WZ2"/>
-                        <table alignment="left" id="DcO-DN-d9P">
+                        <label alignment="left" text="Поллиана" numberOfLines="0" id="hax-1J-WZ2">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <imageView alignment="left" image="444" id="xdB-BU-jKr"/>
+                        <group width="1" alignment="left" layout="vertical" id="Wi2-X9-QYO">
                             <items>
-                                <tableRow identifier="titleRowid" id="3T1-7s-gmV" customClass="TableTitleRow" customModule="TableWatchLesson_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="iv7-C1-iYd">
-                                        <items>
-                                            <label alignment="left" text="Title Label" id="Ygn-gc-ZD2"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="myTitleLabel" destination="Ygn-gc-ZD2" id="ogn-l2-vBp"/>
-                                    </connections>
-                                </tableRow>
-                                <tableRow identifier="objectRowid" id="AKU-dN-Rgl" customClass="TableObjectRow" customModule="TableWatchLesson_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="non-Ud-BJy">
-                                        <items>
-                                            <label alignment="left" text="1. First object" id="m1R-9k-Ljd"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="objectTitle" destination="m1R-9k-Ljd" id="PyN-Cb-uqY"/>
-                                    </connections>
-                                </tableRow>
+                                <label alignment="left" text="Автор:" id="Ovk-Qe-FTk">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="left" text="Елена Михалкова Елена" numberOfLines="0" id="xoV-7S-Zbv"/>
                             </items>
-                        </table>
+                        </group>
+                        <group width="1" alignment="left" spacing="8" id="Pzu-Nm-NJR">
+                            <items>
+                                <label alignment="left" text="Издание:" id="RnS-ZI-Qtp">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="left" text="2019" id="LM1-56-nhg"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" spacing="8" id="sjo-a2-4vJ">
+                            <items>
+                                <label alignment="left" text="Страниц:" id="XiC-IJ-tFk">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="left" text="380" id="DXD-kN-3dp"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="cVF-Ow-zgn">
+                            <items>
+                                <label alignment="left" text="Описание:" id="GrJ-Fa-htZ">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <button alignment="left" id="OjF-dy-Iin">
+                                    <group key="contentGroup" width="1" alignment="left" id="mYg-sY-1Eb">
+                                        <items>
+                                            <label alignment="left" numberOfLines="5" id="9wT-bl-xvQ">
+                                                <string key="text">Перед вами двадцать шестой роман цикла загадочных детективных историй «Расследования Макара Илюшина и Сергея Бабкина» от признанного мастера остросюжетной прозы Елены Михалковой.\nПожилая женщина Анна Сергеевна Бережкова живет в маленьком поселке, где все друг друга знают. Когда в соседнем пустующем доме наконец появляются новые жильцы, старушка сначала радуется, однако после знакомства с Натальей и Антоном решает, что лучше бы дом и дальше пустовал.</string>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <segue destination="VuX-Ig-UcM" kind="push" id="fNg-Hb-DXk"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Выбрать книгу" id="Yqj-qJ-cGS">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <connections>
+                                <segue destination="JhL-Ig-GbC" kind="push" identifier="confirmBook" id="my2-pr-vQv"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="detailTable" destination="DcO-DN-d9P" id="l5d-Zk-5uW"/>
+                        <outlet property="authorLabel" destination="xoV-7S-Zbv" id="rOm-X3-Tti"/>
+                        <outlet property="descriptionLabel" destination="9wT-bl-xvQ" id="SRs-Uk-rLX"/>
+                        <outlet property="editionLabel" destination="LM1-56-nhg" id="mAS-uU-3XH"/>
+                        <outlet property="image" destination="xdB-BU-jKr" id="TKX-pS-IIx"/>
+                        <outlet property="nameLabel" destination="hax-1J-WZ2" id="mII-gc-5Gb"/>
+                        <outlet property="pagesLabel" destination="DXD-kN-3dp" id="L1j-dP-wsl"/>
+                        <outlet property="selectButton" destination="Yqj-qJ-cGS" id="zTs-Yl-WNW"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="565" y="-286"/>
+            <point key="canvasLocation" x="598" y="-286"/>
+        </scene>
+        <!--Description Interface Controller-->
+        <scene sceneID="4cw-OU-SXl">
+            <objects>
+                <controller id="VuX-Ig-UcM" customClass="DescriptionInterfaceController" customModule="TableWatchLesson_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="l1y-o3-de7"/>
+                        <button width="1" alignment="left" title="Назад" id="jsu-Vp-zbG">
+                            <color key="titleColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                            <connections>
+                                <action selector="cancelSelected" destination="VuX-Ig-UcM" id="R9k-pc-gNX"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="l1y-o3-de7" id="SAn-Ta-Toi"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="929" y="-443"/>
+        </scene>
+        <!--Confirm Interface Controller-->
+        <scene sceneID="pHv-n6-4CO">
+            <objects>
+                <controller id="JhL-Ig-GbC" customClass="ConfirmInterfaceController" customModule="TableWatchLesson_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="IH7-cr-kQi"/>
+                        <group width="1" alignment="left" layout="vertical" spacing="4" id="LxB-yY-MxJ">
+                            <items>
+                                <button width="1" alignment="left" title="Выбрать книгу" id="QrS-1A-Eg9">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                    <connections>
+                                        <action selector="bookSelected" destination="JhL-Ig-GbC" id="Ng7-OJ-XeJ"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Отменить" id="UPn-4t-WPO">
+                                    <color key="titleColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                    <connections>
+                                        <action selector="cancelSelected" destination="JhL-Ig-GbC" id="1A6-Bo-3SH"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="confirmationlabel" destination="IH7-cr-kQi" id="amj-4k-G5J"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="929" y="-37"/>
         </scene>
     </scenes>
     <resources>
+        <image name="444" width="207.5" height="250"/>
         <image name="children" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Ax-j3-Sa4"/>
+    </inferredMetricsTieBreakers>
 </document>

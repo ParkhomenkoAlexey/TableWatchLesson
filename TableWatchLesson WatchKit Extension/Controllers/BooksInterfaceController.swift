@@ -30,10 +30,10 @@ class BooksInterfaceController: WKInterfaceController {
     
     func add(withGenre genre: GenreType, books: [BookItem]) {
         let rows = table.numberOfRows
-        table.insertRows(at: NSIndexSet(index: rows) as IndexSet, withRowType: "headerRowid")
+        table.insertRows(at: NSIndexSet(index: rows) as IndexSet, withRowType: "headerRow")
 
         let itemRows = NSIndexSet(indexesIn: NSRange(location: rows + 1, length: books.count))
-        table.insertRows(at: itemRows as IndexSet, withRowType: "tableid")
+        table.insertRows(at: itemRows as IndexSet, withRowType: "bookRow")
         
         // конфигурация каждой ячейки
         for i in rows..<table.numberOfRows {
@@ -46,8 +46,7 @@ class BooksInterfaceController: WKInterfaceController {
             } else if let controller = controller as? TableRowController {
                 
                 let book = books[i - rows - 1]
-                controller.titleLabel.setText(book.name)
-                controller.descriptionLabel.setText("Author: \(book.author)")
+                controller.book = book
             }
         }
     }

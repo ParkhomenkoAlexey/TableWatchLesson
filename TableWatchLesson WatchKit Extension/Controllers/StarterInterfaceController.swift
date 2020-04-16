@@ -23,25 +23,19 @@ class StarterInterfaceController: WKInterfaceController {
         
         let pickedBooks = UserSettings.userBooks
         print(pickedBooks)
-        table.setNumberOfRows(pickedBooks.count, withRowType: "BookRowType")
+        table.setNumberOfRows(pickedBooks.count, withRowType: "myBookRow")
         for index in 0...(pickedBooks.count) {
-            if let controller = table.rowController(at: index) as? BookRowController {
+            if let controller = table.rowController(at: index) as? MyBookRowController {
                 let book = pickedBooks[index]
                 controller.book = book
             }
         }
     }
-        
-//      if let purchasedMovieTickets = TicketOffice.sharedInstance.purchasedMovies() {
-//        let numberOfMovies = purchasedMovieTickets.count
-//        table.setNumberOfRows(numberOfMovies, withRowType: "MovieRowType")
-//        for index in 0...(numberOfMovies-1) {
-//          if let controller = table.rowController(at: index) as? MovieRowController {
-//            let movie = purchasedMovieTickets[index]
-//            controller.movie = movie
-//          }
-//        }
-//      }
-//    }
-
+    
+    override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
+        if let rowController = table.rowController(at: rowIndex) as? MyBookRowController {
+          return rowController.book
+        }
+        return nil
+    }
 }
