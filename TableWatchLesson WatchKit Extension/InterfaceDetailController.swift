@@ -17,11 +17,9 @@ class InterfaceDetailController: WKInterfaceController {
         super.awake(withContext: context)
         
         if let model = context as? Model {
-            
             let rowTypes: [String] = ["titleRowid"] + model.objects.map({ (_) in
                 "objectRowid"
             })
-            print(rowTypes)
             detailTable.setRowTypes(rowTypes)
             for i in 0..<detailTable.numberOfRows {
                 let row = detailTable.rowController(at: i)

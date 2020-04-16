@@ -26,6 +26,21 @@
                                         <segue destination="7lh-B3-HFU" kind="push" id="3Ax-j3-Sa4"/>
                                     </connections>
                                 </tableRow>
+                                <tableRow identifier="headerRowid" id="68R-xI-xO5" customClass="HeaderRowController" customModule="TableWatchLesson_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="EMv-2E-A5x">
+                                        <items>
+                                            <imageView width="40" height="40" alignment="left" verticalAlignment="center" image="fruits" contentMode="scaleAspectFit" id="dCA-D8-Wvi"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="Wrr-7Z-ptj">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="dCA-D8-Wvi" id="e6M-GP-Qec"/>
+                                        <outlet property="label" destination="Wrr-7Z-ptj" id="5Qq-SS-2oy"/>
+                                    </connections>
+                                </tableRow>
                             </items>
                         </table>
                     </items>
@@ -41,6 +56,7 @@
             <objects>
                 <controller id="7lh-B3-HFU" customClass="InterfaceDetailController" customModule="TableWatchLesson_WatchKit_Extension">
                     <items>
+                        <label alignment="left" text="Label" id="hax-1J-WZ2"/>
                         <table alignment="left" id="DcO-DN-d9P">
                             <items>
                                 <tableRow identifier="titleRowid" id="3T1-7s-gmV" customClass="TableTitleRow" customModule="TableWatchLesson_WatchKit_Extension">
@@ -74,4 +90,7 @@
             <point key="canvasLocation" x="328" y="31"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fruits" width="512" height="512"/>
+    </resources>
 </document>
