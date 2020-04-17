@@ -13,6 +13,7 @@ import Foundation
 class StarterInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var table: WKInterfaceTable!
+    var selectedRow: Int! = nil
     
     override func willActivate() {
       super.willActivate()
@@ -37,5 +38,10 @@ class StarterInterfaceController: WKInterfaceController {
           return rowController.book
         }
         return nil
+    }
+    
+    @IBAction func deleteAll() {
+        UserSettings.userBooks = []
+        updateDisplay()
     }
 }

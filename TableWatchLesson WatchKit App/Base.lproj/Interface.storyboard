@@ -20,6 +20,9 @@
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
                                         </items>
+                                        <gestureRecognizers>
+                                            <longPressGestureRecognizer id="GOc-wV-iJf"/>
+                                        </gestureRecognizers>
                                         <connections>
                                             <segue destination="7lh-B3-HFU" kind="push" identifier="detailBook" id="oZU-j6-xkh"/>
                                         </connections>
@@ -39,6 +42,15 @@
                             </connections>
                         </button>
                     </items>
+                    <menu key="menu" id="AGN-FD-FZN">
+                        <items>
+                            <menuItem title="Delete all" icon="trash" id="TBD-Iq-xYw">
+                                <connections>
+                                    <action selector="deleteAll" destination="dOY-YP-a0b" id="omn-ss-0am"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="table" destination="9e8-I1-Q2h" id="ohg-4s-CHp"/>
                     </connections>
@@ -229,6 +241,6 @@
         <image name="children" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Ax-j3-Sa4"/>
+        <segue reference="oZU-j6-xkh"/>
     </inferredMetricsTieBreakers>
 </document>
